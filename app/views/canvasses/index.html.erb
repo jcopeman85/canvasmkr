@@ -1,0 +1,7 @@
+<% @canvas.each do |item| %>
+<div class="canvas">
+  <h2 class="title:"><%= item.title %></h2>
+  <p class="problem_statement"><%= item.problem_statement %></p>
+</div>
+<% end %>
+<%= link_to 'New Canvas', "canvas/new" %>

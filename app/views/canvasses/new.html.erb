@@ -1,0 +1,12 @@
+<p>Form goes here</p>
+<%= form_for(@canvas) do |f| %>
+  <div class="field">
+    <%= f.label "Add your canvas starting with a title and problem statement" %><br>
+    <%= f.text_field :title %><br>
+    <%= f.text_area :problem_statement %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Create" %>
+  </div>
+<% end %>
+<p>Thank you for using Canvas Maker!</p>
