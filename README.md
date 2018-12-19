@@ -5,13 +5,13 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version - 2.3.7p456
 
 * System dependencies
 
 * Configuration
 
-* Database creation
+* Database creation - postgreSQL
 
 * Database initialization
 
@@ -22,3 +22,5 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+This is my first attempt at a lot of this stuff - be nice!
