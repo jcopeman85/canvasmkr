@@ -9,12 +9,19 @@
 .demi {
   height: 50%;
 }
+.fullh .demi textarea{
+  min-height: 170px;
+}
 .fullh {
+  min-height: 400px;
+}
+.fullh textarea {
   min-height: 400px;
 }
 .lastrow {
   min-height: 200px;
 }
+.lastrow textarea {min-height: 200px;}
 .canvas-title {
   text-decoration: underline;
   text-align: center;
@@ -26,4 +33,12 @@
 }
 .title-list {
   height: 100%;
+}
+
+textarea {
+  width: 100%;
+
+}
+#canva_title {
+  width:90%;
 }
