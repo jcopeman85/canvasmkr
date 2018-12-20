@@ -1,12 +1,69 @@
-<p>Form goes here</p>
+<div class="container-fluid">
 <%= form_for(@canvas) do |f| %>
   <div class="field">
-    <%= f.label "Add your canvas starting with a title and problem statement" %><br>
-    <%= f.text_field :title %><br>
-    <%= f.text_area :problem_statement %>
+    <div class="col-lg-11">
+      <div class="col-lg-12" id="title"><h2 class="text-center"><%= f.text_field :title %></h2></div>
+      <div class="row fullh">
+        <div class="canvas col">
+          <p class="canvas-title">Problem</p>
+          <p> <%= f.text_area :problem_statement %></p>
+        </div>
+        <div class="col">
+          <div class="row demi">
+            <div class="canvas col">
+              <p class="canvas-title">Solution</p>
+              <p><%= f.text_area :solutions %></p>
+            </div>
+          </div>
+          <div class="row demi">
+            <div class="canvas col">
+              <p class="canvas-title">Key Metrics</p>
+              <p><%= f.text_area :key_metrics %></p>
+            </div>
+          </div>
+        </div>
+        <div class="canvas col">
+          <p class="canvas-title">Unique Value Proposition</p>
+            <p><%= f.text_area :uvp %></p>
+        </div>
+        <div class="col">
+          <div class="row demi">
+            <div class="canvas col">
+              <p class="canvas-title">Unfair Advantage</p>
+                <p><%= f.text_area :unfair_advantage %></p>
+            </div>
+          </div>
+          <div class="row demi">
+            <div class="canvas col">
+              <p class="canvas-title">Channels</p>
+                <p><%= f.text_area :channel %></p>
+            </div>
+          </div>
+        </div>
+        <div class="canvas col"><p class="canvas-title">Customer Segments</p>
+            <p><%= f.text_area :customer_segments %></p>
+        </div>
+      </div>
+      <div class="row lastrow">
+        <div class="canvas col-lg-6">
+          <p class="canvas-title">Cost Structure</p>
+            <p><%= f.text_area :cost_structure %></p>
+        </div>
+        <div class="canvas col-lg-6">
+          <p class="canvas-title">Revenue Streams</p>
+          <p><%= f.text_area :revenue_streams %></p>
+        </div>
+      </div>
+
+      </div>
+
+
+
+
   </div>
   <div class="actions">
     <%= f.submit "Create" %>
   </div>
 <% end %>
 <p>Thank you for using Canvas Maker!</p>
+</div>

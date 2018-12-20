@@ -7,46 +7,64 @@
     <% end %>
     <p class="text-center"><strong><%= link_to 'New Canvas', "canvas/new" %></strong></p>
   </div>
+
+  <% c = @canvas[10] %>
   <div class="col-lg-9">
-    <div class="col-lg-12" id="title"><h2 class="text-center"><%= @canvas[0].title %></h2></div>
+    <div class="col-lg-12" id="title"><h2 class="text-center"><%= c.title %></h2></div>
     <div class="row fullh">
       <div class="canvas col">
         <p class="canvas-title">Problem</p>
-        <p> <%= @canvas[0].problem_statement %></p>
+        <p> <%= c.problem_statement %></p>
       </div>
       <div class="col">
         <div class="row demi">
           <div class="canvas col">
             <p class="canvas-title">Solution</p>
+            <p><%= c.solutions %></p>
           </div>
         </div>
         <div class="row demi">
           <div class="canvas col">
             <p class="canvas-title">Key Metrics</p>
+            <p><%= c.key_metrics %></p>
           </div>
         </div>
       </div>
-      <div class="canvas col"><p class="canvas-title">Unique Value Proposition</p></div>
+      <div class="canvas col">
+        <p class="canvas-title">Unique Value Proposition</p>
+          <p><%= c.uvp %></p>
+      </div>
       <div class="col">
         <div class="row demi">
           <div class="canvas col">
             <p class="canvas-title">Unfair Advantage</p>
+              <p><%= c.unfair_advantage %></p>
           </div>
         </div>
         <div class="row demi">
           <div class="canvas col">
             <p class="canvas-title">Channels</p>
+              <p><%= c.channel %></p>
           </div>
         </div>
       </div>
-      <div class="canvas col"><p class="canvas-title">Customer Segments</p></div>
+      <div class="canvas col"><p class="canvas-title">Customer Segments</p>
+          <p><%= c.customer_segments %></p>
+      </div>
     </div>
     <div class="row lastrow">
-      <div class="canvas col-lg-6"><p class="canvas-title">Cost Structure</p></div>
-      <div class="canvas col-lg-6"><p class="canvas-title">Revenue Streams</p></div>
+      <div class="canvas col-lg-6">
+        <p class="canvas-title">Cost Structure</p>
+          <p><%= c.cost_structure %></p>
+      </div>
+      <div class="canvas col-lg-6">
+        <p class="canvas-title">Revenue Streams</p>
+        <p><%= c.revenue_streams %></p>
+      </div>
     </div>
 
     </div>
+
 
 
 

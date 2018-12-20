@@ -15,6 +15,6 @@ class CanvassesController < ApplicationController
   end
   private
   def canvas_params
-    params.require(:canva).permit(:title, :problem_statement)
+    params.require(:canva).permit(:title, :problem_statement, :solutions, :key_metrics, :uvp, :unfair_advantage, :channel, :customer_segments, :cost_structure, :revenue_streams)
   end
 end

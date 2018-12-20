@@ -1,8 +1,7 @@
-class CreateCanvas < ActiveRecord::Migration[5.2]
+class AddCanvasFields < ActiveRecord::Migration[5.2]
   def change
-    create_table :canvas do |t|
-      t.text :title
-      t.text :problem_statement
+    change_table :canvas do |t|
+
       t.text :solutions
       t.text :key_metrics
       t.text :uvp
@@ -11,7 +10,7 @@ class CreateCanvas < ActiveRecord::Migration[5.2]
       t.text :customer_segments
       t.text :cost_structure
       t.text :revenue_streams
-      t.timestamps
+    
     end
   end
 end
