@@ -1,7 +1,58 @@
-<% @canvas.each do |item| %>
-<div class="canvas">
-  <h2 class="title:"><%= item.title %></h2>
-  <p class="problem_statement"><%= item.problem_statement %></p>
+<div class="container-fluid toppadding">
+  <div class="row">
+  <div class="title-list col-lg-2">
+    <p class="text-center"><strong>Your Canvas List</strong></p>
+    <% @canvas.each do | item | %>
+    <p class="text-center"><a class="canvas-link" href="#"><%= item.title %></a></p>
+    <% end %>
+    <p class="text-center"><strong><%= link_to 'New Canvas', "canvas/new" %></strong></p>
+  </div>
+  <div class="col-lg-9">
+    <div class="col-lg-12" id="title"><h2 class="text-center"><%= @canvas[0].title %></h2></div>
+    <div class="row fullh">
+      <div class="canvas col">
+        <p class="canvas-title">Problem</p>
+        <p> <%= @canvas[0].problem_statement %></p>
+      </div>
+      <div class="col">
+        <div class="row demi">
+          <div class="canvas col">
+            <p class="canvas-title">Solution</p>
+          </div>
+        </div>
+        <div class="row demi">
+          <div class="canvas col">
+            <p class="canvas-title">Key Metrics</p>
+          </div>
+        </div>
+      </div>
+      <div class="canvas col"><p class="canvas-title">Unique Value Proposition</p></div>
+      <div class="col">
+        <div class="row demi">
+          <div class="canvas col">
+            <p class="canvas-title">Unfair Advantage</p>
+          </div>
+        </div>
+        <div class="row demi">
+          <div class="canvas col">
+            <p class="canvas-title">Channels</p>
+          </div>
+        </div>
+      </div>
+      <div class="canvas col"><p class="canvas-title">Customer Segments</p></div>
+    </div>
+    <div class="row lastrow">
+      <div class="canvas col-lg-6"><p class="canvas-title">Cost Structure</p></div>
+      <div class="canvas col-lg-6"><p class="canvas-title">Revenue Streams</p></div>
+    </div>
+
+    </div>
+
+
+
+  </div>
 </div>
-<% end %>
-<%= link_to 'New Canvas', "canvas/new" %>
+
+
+
+</div>
