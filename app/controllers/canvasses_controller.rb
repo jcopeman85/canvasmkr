@@ -2,8 +2,11 @@ class CanvassesController < ApplicationController
   def index
     @canvas = Canva.all
     #puts "canvas id: #{canvas_id}"
-    @canvas_id = params[:id].to_i
-
+    if params[:id]
+      @canvas_id = params[:id].to_i
+    else
+      @canvas_id = 0
+    end
 
   end
 

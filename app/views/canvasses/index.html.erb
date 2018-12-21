@@ -3,12 +3,12 @@
   <div class="title-list col-lg-2">
     <p class="text-center"><strong>Your Canvas List</strong></p>
     <% @canvas.each do | item | %>
-    <p class="text-center"><a class="canvas-link" href="/canvas/<%= item.id - 1 %>"><%= item.title %></a></p>
+    <p class="text-center"><a class="canvas-link" href="/canvas/<%= item.id %>"><%= item.title %></a></p>
     <% end %>
-    <p class="text-center"><strong><%= link_to 'New Canvas', "canvas/new" %></strong></p>
+    <p class="text-center"><strong><%= link_to 'New Canvas', "/new" %></strong></p>
   </div>
 
-  <% c = @canvas[@canvas_id] %>
+  <% c = @canvas.find { |g| g.id == @canvas_id } %>
   <div class="col-lg-9">
     <div class="col-lg-12" id="title"><h2 class="text-center"><%= c.title %></h2></div>
     <div class="row fullh">
