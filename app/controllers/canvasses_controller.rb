@@ -1,10 +1,16 @@
 class CanvassesController < ApplicationController
   def index
     @canvas = Canva.all
+    #puts "canvas id: #{canvas_id}"
+    @canvas_id = params[:id].to_i
+
+
   end
+
   def new
     @canvas = Canva.new
   end
+
   def create
     @canvas = Canva.new(canvas_params)
     if @canvas.save

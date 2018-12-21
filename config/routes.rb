@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   get '/canvas' => 'canvasses#index'
   get '/canvas/new' => 'canvasses#new'
   post 'canvas' => 'canvasses#create'
-  
+  get '/canvas/:id' => 'canvasses#index'
+
 end
