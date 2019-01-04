@@ -5,10 +5,13 @@
     <% @canvas.each do | item | %>
     <p class="text-center"><a class="canvas-link" href="/canvas/<%= item.id %>"><%= item.title %></a></p>
     <% end %>
-    <p class="text-center"><strong><%= link_to 'New Canvas', "/new" %></strong></p>
+    <p class="text-center"><strong><%= link_to 'New Canvas', "canvas/new" %></strong></p>
   </div>
 
   <% c = @canvas.find { |g| g.id == @canvas_id } %>
+  <% if not c then c = @canvas.first end %>
+
+
   <div class="col-lg-9">
     <div class="col-lg-12" id="title"><h2 class="text-center"><%= c.title %></h2></div>
     <div class="row fullh">
